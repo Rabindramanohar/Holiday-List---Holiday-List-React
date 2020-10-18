@@ -1,13 +1,17 @@
-import React, {Component, useState} from "react";
+import React, {Component} from "react";
 import '../styles/App.css';
 
 class App extends Component {
     render() {
-
+        let cities = ["Goa", "Darjeeling", "Lonavala"];
         return(
            <>
-//write your code here
-	</>
+            <ol>
+                {cities.map((city, idx) => (
+                    <li key={"location" +(idx+1)}>{city}</li>
+                ))}
+            </ol>
+           </>
         )
     }
 }
